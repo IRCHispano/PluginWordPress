@@ -7,7 +7,7 @@ Este plugin permite integrar servicios de la red de IRC de ChatHispano http://ch
 
 ## Servicios disponibles
 
-### Webchat responsibe
+### Webchat responsive
 Webchat totalmente adaptable al tamaño de la pantalla en la que se muestra, modificándose su usabilidad para que sea más sencillo su uso. Incluye características como compartir imágenes o “Gente cerca” con la que podrás encontrar amigos cerca de tu localización. Es nuestro webchat principal.
 
 ### Webchat Kiwi
@@ -25,7 +25,7 @@ Pasos a realizar
 
 ## Uso
 
-### Webchat responsibe
+### Webchat responsive
 
 Insertar el siguiente codigo en una pagina:
 
