@@ -435,7 +435,7 @@ function chathispano_settingspage_kiwi() {
                                     class="small-text"
                                     name="chathispano_kiwi_width"
                                     id="chathispano_kiwi_width"
-                                    value="<?php get_option('chathispano_kiwi_width'); ?>"/>
+                                    value="<?php echo get_option('chathispano_kiwi_width'); ?>"/>
                             <p class="description">Ancho en pixeles o en porcentaje del frame. Se recomienda poner 100% para ser responsive.</p>
                         </fieldset>
                     </td>

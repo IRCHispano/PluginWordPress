@@ -17,7 +17,7 @@ function chathispano_webchat_page( $atts ) {
     if (get_option('chathispano_webchat_nick') != '')
         $url = $url."&nick=".get_option('chathispano_webchat_nick');
 
-    $channels = $atts['chan'];
+    $channels = isset($atts['chan']) ? $atts['chan'] : '';
     if ($channels == '')
         $channels = get_option('chathispano_webchat_chan');
     if ($channels != '')
@@ -30,10 +30,10 @@ function chathispano_webchat_page( $atts ) {
             marginheight="0"
             src="<?php echo $url; ?>"
 <?php
-    if (get_option('chathispano_kiwi_width') != '')
-        echo "width=\"".get_option('chathispano_kiwi_width')."\"";
-    if (get_option('chathispano_kiwi_height') != '')
-        echo "height=\"".get_option('chathispano_kiwi_height')."\"";
+    if (get_option('chathispano_webchat_width') != '')
+        echo "width=\"".get_option('chathispano_webchat_width')."\"";
+    if (get_option('chathispano_webchat_height') != '')
+        echo "height=\"".get_option('chathispano_webchat_height')."\"";
 ?>
             scrolling="no"
             frameborder="0">
@@ -64,7 +64,10 @@ function chathispano_webchat_kiwi_page( $atts ) {
     if (get_option('chathispano_kiwi_nick') != '')
         $url = $url."&nick=".get_option('chathispano_kiwi_nick');
 
-    $channels = $atts['chan'];
+    if (get_option('chathispano_kiwi_quit') != '')
+        $url = $url."&quit=".urlencode(get_option('chathispano_kiwi_quit'));
+
+    $channels = isset($atts['chan']) ? $atts['chan'] : '';
     if ($channels == '')
         $channels = get_option('chathispano_kiwi_chan');
     if ($channels != '')

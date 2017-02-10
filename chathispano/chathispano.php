@@ -3,7 +3,7 @@
 Plugin name: ChatHispano Plugin
 Plugin URI: http://github.com/IRCHispano
 Description: Plugin de Wordpress para poner Webchat de ChatHispano en su Wordpress
-Version: 1.0
+Version: 1.0.1
 Author: ChatHispano
 Author URI: http://github.com/IRCHispano
 License: GPL2
@@ -27,7 +27,7 @@ Text Domain: chathispano
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-define( 'CHATHISPANO_VERSION', '1.0' );
+define( 'CHATHISPANO_VERSION', '1.0.1' );
 
 define( 'CHATHISPANO__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
@@ -58,5 +58,31 @@ function chathispano_plugin_links( $actions, $plugin_file ) {
 
 add_filter( 'plugin_action_links', 'chathispano_plugin_links', 10, 5 );
 
-?>
+/* Establecemos los valores por defecto */
+function chathispano_set_defaults()
+{
+    $config = array(
+        'chathispano_webchat_nick'      => 'WPWebchat_?',
+        'chathispano_webchat_chan'      => '#IRC-Hispano',
+        'chathispano_webchat_theme'     => 'chathispano',
+        'chathispano_webchat_height'    => '700',
+        'chathispano_webchat_width'     => '100%',
+        'chathispano_kiwi_nick'         => 'WPWebchat_?',
+        'chathispano_kiwi_chan'         => '#IRC-Hispano',
+        'chathispano_kiwi_quit'         => 'Si tienes una Web con WordPress, descarga el plugin de ChatHispano para poner un chat desde tu web',
+        'chathispano_kiwi_theme'        => 'chathispano',
+        'chathispano_kiwi_height'       => '700',
+        'chathispano_kiwi_width'        => '100%',
+    );
 
+    foreach ( $config as $key => $value )
+    {
+        if (!get_option($key)) {
+            update_option($key, $value);
+        }
+    }
+}
+
+register_activation_hook( __FILE__, 'chathispano_set_defaults');
+
+?>
