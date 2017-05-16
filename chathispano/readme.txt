@@ -3,7 +3,7 @@ Contributors: tonigarcia
 Tags: irc, chat, webchat, network, gente, people, chathispano, irc-hispano, irchispano, hispano
 Requires at least: 4.7
 Tested up to: 4.7
-Stable tag: 1.0.1
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -61,6 +61,10 @@ Si tienes dudas, preguntas, sugerencias o notificar de fallos ponte en contacto 
 5. Página de configuración del WebChat Kiwi.
 
 == Changelog ==
+
+= 1.1.0 =
+* Nuevas opciones de colores, titulo y logo para WebChat responsive.
+* Cambio de URL de WebChat responsive.
 
 = 1.0.1 =
 * Se establecen valores por defecto al cargar por primera vez el plugin.
