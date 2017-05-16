@@ -3,7 +3,7 @@
 Plugin name: ChatHispano Plugin
 Plugin URI: http://github.com/IRCHispano
 Description: Plugin de Wordpress para poner Webchat de ChatHispano en su Wordpress
-Version: 1.0.1
+Version: 1.1.0
 Author: ChatHispano
 Author URI: http://github.com/IRCHispano
 License: GPL2
@@ -27,11 +27,11 @@ Text Domain: chathispano
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-define( 'CHATHISPANO_VERSION', '1.0.1' );
+define( 'CHATHISPANO_VERSION', '1.1.0' );
 
 define( 'CHATHISPANO__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
-define( 'CHATHISPANO_WEBCHAT_URLBASE', 'https://chatmovil.chathispano.com' );
+define( 'CHATHISPANO_WEBCHAT_URLBASE', 'https://chathispano.com/webchat/' );
 define( 'CHATHISPANO_KIWI_URLBASE', 'https://kiwi.chathispano.com' );
 
 
@@ -64,7 +64,9 @@ function chathispano_set_defaults()
     $config = array(
         'chathispano_webchat_nick'      => 'WPWebchat_?',
         'chathispano_webchat_chan'      => '#IRC-Hispano',
-        'chathispano_webchat_theme'     => 'chathispano',
+        'chathispano_webchat_theme'     => 'embeb',
+        'chathispano_webchat_style'     => 'indigo',
+        'chathispano_webchat_title'     => 'Webchat de ChatHispano',
         'chathispano_webchat_height'    => '700',
         'chathispano_webchat_width'     => '100%',
         'chathispano_kiwi_nick'         => 'WPWebchat_?',

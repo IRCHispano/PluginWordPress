@@ -55,6 +55,12 @@ function chathispano_settings() {
     register_setting('chathispano-settings-webchat-group',
                      'chathispano_webchat_theme');
     register_setting('chathispano-settings-webchat-group',
+                     'chathispano_webchat_style');
+    register_setting('chathispano-settings-webchat-group',
+                     'chathispano_webchat_title');
+    register_setting('chathispano-settings-webchat-group',
+                     'chathispano_webchat_logo');
+    register_setting('chathispano-settings-webchat-group',
                      'chathispano_webchat_height');
     register_setting('chathispano-settings-webchat-group',
                      'chathispano_webchat_width');
@@ -225,18 +231,50 @@ function chathispano_settingspage_webchat() {
             <h2>Apariencia</h2>
             <tbody>
                 <tr>
-                    <th scope="row">Tema</th>
+                    <th scope="row">Colores del estilo</th>
                     <td>
                         <fieldset>
                             <legend class="screen-reader-text">...</legend>
-                            <select name="chathispano_webchat_theme"
-                                    id="chathispano_webchat_theme">
-                                <option value="chathispano" <?php selected(get_option('chathispano_webchat_theme'), "chathispano"); ?>>Chathispano</option>
-                                <option value="pokemon" <?php selected(get_option('chathispano_webchat_theme'), "pokemon"); ?>>Pokemon</option>
-                                <option value="chathetero" <?php selected(get_option('chathispano_webchat_theme'), "chathetero"); ?>>Sexo</option>
-                                <option value="chatgay" <?php selected(get_option('chathispano_webchat_theme'), "chatgay"); ?>>Gay</option>
+                            <select name="chathispano_webchat_style"
+                                    id="chathispano_webchat_style">
+                                <option value="indigo" <?php selected(get_option('chathispano_webchat_style'), "indigo"); ?>>Indigo (Azul oscuro)</option>
+                                <option value="purple" <?php selected(get_option('chathispano_webchat_style'), "purple"); ?>>Purple (Púrpura)</option>
+                                <option value="teal" <?php selected(get_option('chathispano_webchat_style'), "teal"); ?>>Teal (Verde azulado)</option>
+                                <option value="yellow" <?php selected(get_option('chathispano_webchat_style'), "yellow"); ?>>Yellow (Amarillo)</option>
+                                <option value="green" <?php selected(get_option('chathispano_webchat_style'), "green"); ?>>Green (Verde)</option>
+                                <option value="orange" <?php selected(get_option('chathispano_webchat_style'), "orange"); ?>>Naranja (Naranja)</option>
+                                <option value="blue" <?php selected(get_option('chathispano_webchat_style'), "blue"); ?>>Blue (Azul)</option>
+
                             </select>
-                            <label>Tema visual a aplicar en el Webchat.</label>
+                            <label>Tema de colores a aplicar en el Webchat.</label>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Título</th>
+                    <td>
+                        <fieldset>
+                            <legend class="screen-reader-text">...</legend>
+                            <input  type="text"
+                                    class="regular-text code"
+                                    name="chathispano_webchat_title"
+                                    id="chathispano_webchat_title"
+                                    value="<?php echo get_option('chathispano_webchat_title'); ?>"/>
+                            <p class="description">Titulo en el Webchat. Se mostrará con al menos 992 pixeles de ancho en el frame</p>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Logotipo</th>
+                    <td>
+                        <fieldset>
+                            <legend class="screen-reader-text">...</legend>
+                            <input  type="text"
+                                    class="regular-text code"
+                                    name="chathispano_webchat_logo"
+                                    id="chathispano_webchat_logo"
+                                    value="<?php echo get_option('chathispano_webchat_logo'); ?>"/>
+                            <p class="description">URL de la imagen para utilizarlo como logotipo del chat. Se requiere HTTPS.</p>
                         </fieldset>
                     </td>
                 </tr>

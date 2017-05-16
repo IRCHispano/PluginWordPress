@@ -7,6 +7,17 @@ function chathispano_webchat_page( $atts ) {
 
     if (get_option('chathispano_webchat_theme') != '')
         $url = $url."theme=".get_option('chathispano_webchat_theme');
+    else
+        $url = $url."theme=embed";
+
+    if (get_option('chathispano_webchat_style') != '')
+        $url = $url."&style=".get_option('chathispano_webchat_style');
+
+    if (get_option('chathispano_webchat_title') != '')
+        $url = $url."&title=".get_option('chathispano_webchat_title');
+
+    if (get_option('chathispano_webchat_logo') != '')
+        $url = $url."&logo=".get_option('chathispano_webchat_logo');
 
     if (get_option('chathispano_webchat_autoload'))
         $url = $url."&autoload=true";
