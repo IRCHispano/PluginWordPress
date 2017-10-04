@@ -59,4 +59,3 @@ Puedes especificar canal para una página específica en vez de usar el canal po
 ## Contacto
 
 Para cualquier problema, duda, petición, sugerencia, escribir email a zoltan@chathispano.com
-
