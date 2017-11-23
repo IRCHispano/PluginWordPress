@@ -7,11 +7,9 @@ Este plugin permite integrar servicios de la red de IRC de ChatHispano http://ch
 
 ## Servicios disponibles
 
-### Webchat responsive
-Webchat totalmente adaptable al tamaño de la pantalla en la que se muestra, modificándose su usabilidad para que sea más sencillo su uso. Incluye características como compartir imágenes o “Gente cerca” con la que podrás encontrar amigos cerca de tu localización. Es nuestro webchat principal.
-
-### Webchat Kiwi
-Webchat basado en el conocido Kiwi IRC ofrece una gran compatibilidad con los comandos usados por la mayor parte de los clientes chat de escritorio. Es ideal para cualquier usuario acostumbrado al uso del irc en el escritorio.
+### Webchat
+Webchat basado en la nueva versión del conocido Kiwi IRC, en que ChatHispano ha participado activamente en el desarrollo con el equipo de Kiwi.
+ChatHispano ha desarrollado unos plugins en el Kiwi para extender nuevas funcionalidades que no lleva el Kiwi original como VideoChat, VoiceChat, geolocalización para chatear con los usuarios más cercanos, listado de canales destacados, entre otras cosas.
 
 
 ## Instalación
@@ -25,7 +23,7 @@ Pasos a realizar
 
 ## Uso
 
-### Webchat responsive
+### Webchat
 
 Insertar el siguiente codigo en una pagina:
 
@@ -37,22 +35,6 @@ Puedes especificar canal para una pagina especifica en vez de usar el canal por 
 
 ```
 [chathispano_webchat chan=#Madrid]
-```
-
-
-### Webchat Kiwi
-
-Insertar el siguiente código en una página:
-
-```
-[chathispano_kiwi]
-```
-
-
-Puedes especificar canal para una página específica en vez de usar el canal por defecto configurado con:
-
-```
-[chathispano_kiwi chan=#Barcelona]
 ```
 
 
