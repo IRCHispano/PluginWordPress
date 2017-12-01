@@ -11,7 +11,7 @@ function chathispano_webchat_page( $atts ) {
         $url = $url."theme=chathispano";
 
     if (get_option('chathispano_webchat_layout') != '')
-        $url = $url."layout=".get_option('chathispano_webchat_layout');
+        $url = $url."&layout=".get_option('chathispano_webchat_layout');
 
     if (get_option('chathispano_webchat_autojoin'))
         $url = $url."&autojoin=true";
