@@ -3,7 +3,7 @@ Contributors: tonigarcia
 Tags: irc, chat, webchat, network, gente, people, chathispano, irc-hispano, irchispano, hispano
 Requires at least: 4.7
 Tested up to: 4.9
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -64,6 +64,9 @@ Si tienes dudas, preguntas, sugerencias o notificar de fallos ponte en contacto 
 8. Página con el tema Purple.
 
 == Changelog ==
+
+= 1.2.1 =
+* Nueva opcion para configurar el diseño de los chats.
 
 = 1.2.0 =
 * Reestructuración por los cambios en la Web de ChatHispano, se elimina el chat responsive y el Kiwi pasa a ser el chat principal.

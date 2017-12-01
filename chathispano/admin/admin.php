@@ -48,6 +48,8 @@ function chathispano_settings() {
     register_setting('chathispano-settings-webchat-group',
                      'chathispano_webchat_theme');
     register_setting('chathispano-settings-webchat-group',
+                     'chathispano_webchat_layout');
+    register_setting('chathispano-settings-webchat-group',
                      'chathispano_webchat_height');
     register_setting('chathispano-settings-webchat-group',
                      'chathispano_webchat_width');
@@ -207,6 +209,21 @@ function chathispano_settingspage_webchat() {
 
                             </select>
                             <label>Tema de colores a aplicar en el Webchat.</label>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Tema del Webchat</th>
+                    <td>
+                        <fieldset>
+                            <legend class="screen-reader-text">...</legend>
+                            <select name="chathispano_webchat_layout"
+                                    id="chathispano_webchat_layout">
+                                <option value="compact" <?php selected(get_option('chathispano_webchat_layout'), "compact"); ?>>Compact (Tradiconal)</option>
+                                <option value="modern" <?php selected(get_option('chathispano_webchat_layout'), "modern"); ?>>Modern (Google)</option>
+
+                            </select>
+                            <label>Diseño de los chats.</label>
                         </fieldset>
                     </td>
                 </tr>
